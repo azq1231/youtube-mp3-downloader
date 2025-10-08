@@ -38,7 +38,7 @@
 ### 步驟 2：下載後端伺服器
 
 1.  前往本專案的 **GitHub Releases 頁面**。 <!-- 請將 YOUR_USERNAME 換成您的 GitHub 使用者名稱 -->
-    *   ➡️ **[點此前往下載頁面](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/releases)**
+    *   ➡️ **[點此前往下載頁面](https://github.com/azq1231/youtube-mp3-downloader/releases)**
 2.  下載最新版本的 `yt_mp3_server.exe` 檔案。
 
 ### 步驟 3：安裝使用者腳本
