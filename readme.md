@@ -2,7 +2,7 @@
 
 這是一個由「後端伺服器」與「瀏覽器使用者腳本」組成的工具，讓您可以在 YouTube 影片頁面一鍵下載 MP3 音訊，無需離開或複製貼上網址到其他網站。
 
- <!-- 建議您放一張示意圖 -->
+ <img width="1169" height="862" alt="image" src="https://github.com/user-attachments/assets/d25f2f2a-a400-4907-8166-fdb4d463f8cb" />
 
 ---
 
@@ -71,7 +71,7 @@
 
 1.  Clone 本專案儲存庫：
     ```bash
-    git clone https://github.com/YOUR_USERNAME/youtube-mp3-downloader.git
+    git clone https://github.com/azq1231/youtube-mp3-downloader.git
     cd youtube-mp3-downloader
     ```
 
