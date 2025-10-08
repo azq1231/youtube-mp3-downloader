@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube MP3 Downloader",
+  "version": "1.0.0",
+  "description": "在 YouTube 頁面新增一個按鈕，使用 yt-dlp 下載 MP3。",
+
+  "permissions": [
+    "nativeMessaging",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "*://*.youtube.com/*",
+    "http://localhost:8888/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/watch*"],
+      "js": ["content_script.js"]
+    }
+  ]
+}
