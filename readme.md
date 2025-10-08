@@ -2,7 +2,8 @@
 
 這是一個由「後端伺服器」與「瀏覽器使用者腳本」組成的工具，讓您可以在 YouTube 影片頁面一鍵下載 MP3 音訊，無需離開或複製貼上網址到其他網站。
 
-https://private-user-images.githubusercontent.com/70485889/498600531-d25f2f2a-a400-4907-8166-fdb4d463f8cb.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTk4ODMzMTcsIm5iZiI6MTc1OTg4MzAxNywicGF0aCI6Ii83MDQ4NTg4OS80OTg2MDA1MzEtZDI1ZjJmMmEtYTQwMC00OTA3LTgxNjYtZmRiNGQ0NjNmOGNiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTEwMDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMDA4VDAwMjMzN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWQwNDMwMWY1MWQ4Y2NkY2RhZDg5NjgwZWQwOGNmMGIwMDMxMDg5NTYyNmU3NjY2NTNlYTNlZjJlNzdlM2QzOGUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.8BFuHvg2PiISCjO90Se1c8kU74Zp1UIBiq-fpwhsI3U
+ <img width="1169" height="862" alt="image" src="https://github.com/user-attachments/assets/d25f2f2a-a400-4907-8166-fdb4d463f8cb" />
+
 ---
 
 ## ✨ 功能特色
@@ -71,7 +72,7 @@ https://private-user-images.githubusercontent.com/70485889/498600531-d25f2f2a-a4
 
 1.  Clone 本專案儲存庫：
     ```bash
-    git clone https://github.com/YOUR_USERNAME/youtube-mp3-downloader.git
+    git clone https://github.com/azq1231/youtube-mp3-downloader.git
     cd youtube-mp3-downloader
     ```
 
