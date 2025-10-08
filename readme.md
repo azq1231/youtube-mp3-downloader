@@ -2,7 +2,7 @@
 
 這是一個由「後端伺服器」與「瀏覽器使用者腳本」組成的工具，讓您可以在 YouTube 影片頁面一鍵下載 MP3 音訊，無需離開或複製貼上網址到其他網站。
 
- <img width="1169" height="862" alt="image" src="https://github.com/user-attachments/assets/d25f2f2a-a400-4907-8166-fdb4d463f8cb" />
+<img width="1856" height="869" alt="image" src="https://github.com/user-attachments/assets/0916ddf4-8969-4595-8664-ec729bea81fd" />
 
 ---
 
@@ -46,6 +46,8 @@
 點擊以下連結進行安裝：
 
 ➡️ **點此安裝 YouTube MP3 自動下載器腳本**
+[dj.js](https://github.com/azq1231/youtube-mp3-downloader/blob/main/dl.js)
+https://sleazyfork.org/zh-TW/scripts/551898-youtube-mp3-auto-downloader
 
 您的腳本管理器會跳出一個確認頁面，點擊「安裝」即可。
 
