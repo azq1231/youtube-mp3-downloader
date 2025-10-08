@@ -2,8 +2,7 @@
 
 這是一個由「後端伺服器」與「瀏覽器使用者腳本」組成的工具，讓您可以在 YouTube 影片頁面一鍵下載 MP3 音訊，無需離開或複製貼上網址到其他網站。
 
- <!-- 建議您放一張示意圖 -->
-
+https://private-user-images.githubusercontent.com/70485889/498600531-d25f2f2a-a400-4907-8166-fdb4d463f8cb.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTk4ODMzMTcsIm5iZiI6MTc1OTg4MzAxNywicGF0aCI6Ii83MDQ4NTg4OS80OTg2MDA1MzEtZDI1ZjJmMmEtYTQwMC00OTA3LTgxNjYtZmRiNGQ0NjNmOGNiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTEwMDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMDA4VDAwMjMzN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWQwNDMwMWY1MWQ4Y2NkY2RhZDg5NjgwZWQwOGNmMGIwMDMxMDg5NTYyNmU3NjY2NTNlYTNlZjJlNzdlM2QzOGUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.8BFuHvg2PiISCjO90Se1c8kU74Zp1UIBiq-fpwhsI3U
 ---
 
 ## ✨ 功能特色
@@ -38,13 +37,14 @@
 ### 步驟 2：下載後端伺服器
 
 1.  前往本專案的 **GitHub Releases 頁面**。 <!-- 請將 YOUR_USERNAME 換成您的 GitHub 使用者名稱 -->
+    *   ➡️ **[點此前往下載頁面](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/releases)**
 2.  下載最新版本的 `yt_mp3_server.exe` 檔案。
 
 ### 步驟 3：安裝使用者腳本
 
 點擊以下連結進行安裝：
 
-➡️ **點此安裝 YouTube MP3 自動下載器腳本** <!-- 請將 YOUR_USERNAME 換成您的 GitHub 使用者名稱 -->
+➡️ **點此安裝 YouTube MP3 自動下載器腳本**
 
 您的腳本管理器會跳出一個確認頁面，點擊「安裝」即可。
 

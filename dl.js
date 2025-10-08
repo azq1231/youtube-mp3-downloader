@@ -1,7 +1,9 @@
 // ==UserScript==
 // @name         YouTube MP3 Auto Downloader
 // @namespace    Violentmonkey Scripts
-// @version      2.1
+// @version      2.2
+// @downloadURL  https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/raw/main/dl.js
+// @updateURL    https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/raw/main/dl.js
 // @match        https://www.youtube.com/*
 // @grant        none
 // @description  Adds a floating button to YouTube pages to download audio as MP3 via a local server.
