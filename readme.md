@@ -15,7 +15,7 @@
 *   **系統托盤管理 (v3.1)**：縮小至右下角圖示，支援右鍵操作。
 *   **開機自動執行管理 (v3.1)**：可直接在選單設定隨 Windows 啟動。
 *   **自動維護 (v3.1)**：每兩週自動更新 `yt-dlp` 核心，確保下載不中斷。
-*   **AI 開發者手冊**：提供 [`AI_DEVELOPMENT_MANUAL.md`](file:///d:/MyProjects/ytdl-js/AI_DEVELOPMENT_MANUAL.md) 供後續 AI 協助開發。
+*   **AI 開發者手冊**：提供 [`AI_DEVELOPMENT_MANUAL.md`](AI_DEVELOPMENT_MANUAL.md) 供後續 AI 協助開發。
 
 ## ⚙️ 運作原理
 
@@ -71,6 +71,7 @@ https://sleazyfork.org/zh-TW/scripts/551898-youtube-mp3-auto-downloader
 *   Python 3.8+
 *   FFmpeg (需將 `ffmpeg.exe` 放在專案根目錄，或設定在系統環境變數 PATH 中)
 *   yt-dlp (需將 `yt-dlp.exe` 放在專案根目錄)
+*   Deno (需將 `deno.exe` 放在專案根目錄，作為 JS 挑戰執行期環境)
 
 ### 執行步驟
 
@@ -103,7 +104,7 @@ https://sleazyfork.org/zh-TW/scripts/551898-youtube-mp3-auto-downloader
 
 2.  執行打包命令 (請確認 `yt-dlp.exe`, `ffmpeg.exe` 和 `icon.ico` 都在專案根目錄)：
     ```bash
-    pyinstaller --onefile --noconsole --name yt_mp3_server --icon="icon.ico" --add-binary "yt-dlp.exe;." --add-binary "ffmpeg.exe;." yt_mp3_server.py
+    pyinstaller --onefile --noconsole --name yt_mp3_server --icon="icon.ico" --add-binary "yt-dlp.exe;." --add-binary "ffmpeg.exe;." --add-binary "deno.exe;." yt_mp3_server.py
     ```
 
 3.  打包完成的 `yt_mp3_server.exe` 會出現在 `dist` 資料夾中。

@@ -4,7 +4,7 @@
 a = Analysis(
     ['yt_mp3_server.py'],
     pathex=[],
-    binaries=[('yt-dlp.exe', '.'), ('ffmpeg.exe', '.')],
+    binaries=[('yt-dlp.exe', '.'), ('ffmpeg.exe', '.'), ('deno.exe', '.')],
     datas=[],
     hiddenimports=[],
     hookspath=[],

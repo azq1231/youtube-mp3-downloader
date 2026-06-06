@@ -68,12 +68,44 @@ def get_executable_path(name=None):
     """取得執行檔路徑"""
     if getattr(sys, 'frozen', False):
         if name:
-            return os.path.join(sys._MEIPASS, name)
+            # 優先使用與主程式同目錄的外部程式，以確保 yt-dlp -U 等更新能夠持久保存
+            base_dir = os.path.dirname(sys.executable)
+            target_path = os.path.join(base_dir, name)
+            # 如果同目錄下還沒有，就從 PyInstaller 內建打包資源 (_MEIPASS) 複製過去
+            if not os.path.exists(target_path):
+                mei_path = os.path.join(sys._MEIPASS, name)
+                if os.path.exists(mei_path):
+                    try:
+                        shutil.copy2(mei_path, target_path)
+                        logging.info(f"已從內建資源複製 {name} 到 {target_path}")
+                    except Exception as e:
+                        logging.error(f"複製 {name} 失敗: {e}")
+                        return mei_path
+            return target_path
         return sys.executable
     else:
         if name:
             return os.path.join(os.path.dirname(os.path.abspath(__file__)), name)
         return os.path.abspath(__file__)
+
+def check_and_extract_binaries():
+    """在啟動時，確保所有打包的外部工具都已複製到主程式同級目錄中"""
+    if getattr(sys, 'frozen', False):
+        base_dir = os.path.dirname(sys.executable)
+        for name in ['yt-dlp.exe', 'ffmpeg.exe', 'deno.exe']:
+            target_path = os.path.join(base_dir, name)
+            if not os.path.exists(target_path):
+                mei_path = os.path.join(sys._MEIPASS, name)
+                if os.path.exists(mei_path):
+                    try:
+                        shutil.copy2(mei_path, target_path)
+                        logging.info(f"啟動時已複製 {name} 到 {target_path}")
+                    except Exception as e:
+                        logging.error(f"複製 {name} 失敗: {e}")
+
+# 執行初始化，確保釋放所有必要的二進位檔案
+check_and_extract_binaries()
+
 
 def is_startup_enabled():
     """檢查是否已設定開機自動執行"""
@@ -289,6 +321,12 @@ def download_worker(task_id, clean_url, tmp_dir):
         
         creation_flags = subprocess.CREATE_NO_WINDOW if sys.platform == "win32" else 0
         
+        # 將執行檔目錄（含 deno.exe）加入環境變數 PATH，確保 yt-dlp 能正確調用 JS 執行期環境
+        env = os.environ.copy()
+        exe_dir = os.path.dirname(yt_dlp_path)
+        if exe_dir:
+            env["PATH"] = exe_dir + os.pathsep + env.get("PATH", "")
+            
         # 使用 Popen 以便即時讀取輸出
         process = subprocess.Popen(
             cmd,
@@ -296,6 +334,7 @@ def download_worker(task_id, clean_url, tmp_dir):
             stderr=subprocess.STDOUT,
             text=True,
             creationflags=creation_flags,
+            env=env,
             encoding='utf-8',
             errors='replace'
         )
@@ -353,9 +392,11 @@ def download_worker(task_id, clean_url, tmp_dir):
         logging.info(f"Task {task_id} completed successfully.")
 
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         error_message = str(e)
         if isinstance(e, subprocess.CalledProcessError):
-            error_message = "下載失敗，請稍後再試"
+            error_message = f"下載失敗: {e}"
         
         logging.error(f"Task {task_id} failed: {error_message}")
         DOWNLOAD_TASKS[task_id].update({
